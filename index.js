@@ -32,9 +32,20 @@ function callAudio(i) {
 
 function pressedKeyAnimation(key)
 {
-  var pressedButton = document.querySelector("." + key);
-  pressedButton.classList.add("pressed");
-  setTimeout(function () {
-    pressedButton.classList.remove("pressed");
-  }, 100);
+  switch (key)
+  {
+    case 'w':
+    case 'a':
+    case 's':
+    case 'd':
+    case 'j':
+    case 'k':
+    case 'l':
+      var pressedButton = document.querySelector("." + key);
+      pressedButton.classList.add("pressed");
+      setTimeout(function () {
+        pressedButton.classList.remove("pressed");
+      }, 100);
+  }
+  
 }
